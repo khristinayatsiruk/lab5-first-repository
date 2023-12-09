@@ -51,36 +51,36 @@ class Parking:
 
 if __name__ == "__main__":
 
-    car_1 = Car(CarBrand.BMW, 4, 230, 180)
-    car_2 = Car(CarBrand.AUDI, 6, 210, 165)
-    car_3 = Car(CarBrand.FORD, 2, 190, 126)
-    car_4 = Car(CarBrand.HONDA, 9, 160, 88)
-    car_5 = Car(CarBrand.TOYOTA, 5, 200, 147)
-    car_6 = Car(CarBrand.INFINITY, 7, 195, 164)
+    car_bmw = Car(CarBrand.BMW, 4, 230, 180)
+    car_audi = Car(CarBrand.AUDI, 6, 210, 165)
+    car_ford = Car(CarBrand.FORD, 2, 190, 126)
+    car_honda = Car(CarBrand.HONDA, 9, 160, 88)
+    car_toyota = Car(CarBrand.TOYOTA, 5, 200, 147)
+    car_infinity = Car(CarBrand.INFINITY, 7, 195, 164)
 
     parking = Parking(4, 6.0)
 
-    parking.park_car(car_1)
+    parking.park_car(car_bmw)
     time.sleep(1)
 
-    parking.park_car(car_3)
+    parking.park_car(car_audi)
     time.sleep(1)
 
-    parking.park_car(car_4)
+    parking.park_car(car_ford)
     time.sleep(1)
 
-    parking.park_car(car_5)
+    parking.park_car(car_honda)
     time.sleep(2)
 
-    parking.park_car(car_6)
+    parking.park_car(car_toyota)
     time.sleep(1)
 
-    parking.leave_parking(car_1)
-    parking.park_car(car_6)
+    parking.leave_parking(car_bmw)
+    parking.park_car(car_infinity)
     time.sleep(1)
-    parking.leave_parking(car_2)
-    parking.leave_parking(car_3)
-    parking.leave_parking(car_4)
+    parking.leave_parking(car_audi)
+    parking.leave_parking(car_ford)
+    parking.leave_parking(car_honda)
     
 
 
