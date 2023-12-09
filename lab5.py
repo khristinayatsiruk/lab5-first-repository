@@ -1,9 +1,15 @@
+"""
+Importing all modules
+"""
 import time
 from enum import Enum
 from datetime import datetime
 
 
 class CarBrand(Enum):
+    """
+    Enum representing different types of cars
+    """
     TOYOTA = 1
     HONDA = 2
     FORD = 3
@@ -13,6 +19,9 @@ class CarBrand(Enum):
 
 
 class Car:
+    """
+    Represents a car with basic properties
+    """
     def __init__(self, brand, age, max_speed, horsepower):
         self.brand = brand
         self.age = age
@@ -21,12 +30,18 @@ class Car:
 
 
 class Parking:
+    """
+    Represents a parking composed of cars
+    """
     def __init__(self, max_capacity, hour_rate):
         self.max_capacity = max_capacity
         self.hour_rate = hour_rate
         self.cars = []
 
     def park_car(self, car):
+        """
+        Park a car in the parking.
+        """
         if len(self.cars) < self.max_capacity:
             car.parked_time = datetime.now()
             self.cars.append(car)
@@ -35,6 +50,9 @@ class Parking:
             print(f"Parking is full. Cannot park your {car.brand.name}.")
 
     def leave_parking(self, car):
+        """
+        Leave the parking and calculate the price.
+        """
         if car in self.cars:
             if car.parked_time:
                 parked_duration = (datetime.now() - car.parked_time).total_seconds() / 3600
